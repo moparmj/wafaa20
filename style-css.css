@@ -1,0 +1,203 @@
+/* مزخرف النصوص - التنسيقات */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Tajawal", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root {
+    --primary-color: #3a7bd5;
+    --primary-hover: #2c66b8;
+    --secondary-color: #f5f7fa;
+    --border-color: #e5e9f0;
+    --text-color: #2e3440;
+    --light-text: #4c566a;
+    --success-color: #5cb85c;
+}
+
+body {
+    background-color: #f9fafc;
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+header h1 {
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+}
+
+main {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: var(--light-text);
+}
+
+textarea, select, input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    direction: rtl;
+}
+
+textarea:focus, select:focus, input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(58, 123, 213, 0.2);
+}
+
+.action-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+button {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+.primary-btn {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.primary-btn:hover {
+    background-color: var(--primary-hover);
+}
+
+.secondary-btn {
+    background-color: var(--secondary-color);
+    color: var(--light-text);
+}
+
+.secondary-btn:hover {
+    background-color: var(--border-color);
+}
+
+button:active {
+    transform: translateY(1px);
+}
+
+button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.result-section {
+    margin-top: 1.5rem;
+}
+
+.result-box {
+    min-height: 100px;
+    padding: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    white-space: pre-wrap;
+    word-break: break-word;
+    background-color: var(--secondary-color);
+}
+
+.decoration-options {
+    margin-bottom: 1.5rem;
+}
+
+.hidden {
+    display: none;
+}
+
+#customDecoration {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 0.5rem;
+    padding: 1rem;
+    border: 1px dashed var(--border-color);
+    border-radius: 4px;
+}
+
+#customDecoration label {
+    width: 30%;
+    margin-bottom: 0;
+    display: flex;
+    align-items: center;
+}
+
+#customDecoration input {
+    width: 65%;
+    margin-bottom: 0;
+}
+
+.copied {
+    background-color: var(--success-color) !important;
+    color: white !important;
+}
+
+footer {
+    margin-top: 2rem;
+    text-align: center;
+    color: var(--light-text);
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* تصميم متجاوب */
+@media (max-width: 600px) {
+    .container {
+        padding: 1rem;
+    }
+    
+    main {
+        padding: 1.5rem;
+    }
+    
+    .action-buttons {
+        flex-direction: column;
+    }
+    
+    #customDecoration label,
+    #customDecoration input {
+        width: 100%;
+    }
+}
+
+/* تنسيقات الإطار */
+.frame-result {
+    font-family: monospace;
+    line-height: 1.2;
+}

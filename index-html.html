@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>برنامج الكتابة وإحاطتها بالأشكال</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>مزخرف النصوص | Text Decorator</h1>
+            <p>أكتب جملة وقم بإحاطتها بأشكال جميلة</p>
+        </header>
+        
+        <main>
+            <div class="input-section">
+                <label for="textInput">أدخل النص الذي تريد تزيينه:</label>
+                <textarea id="textInput" rows="3" placeholder="اكتب نصك هنا..."></textarea>
+            </div>
+            
+            <div class="decoration-options">
+                <label for="decorationSelect">اختر نوع الزخرفة:</label>
+                <select id="decorationSelect">
+                    <option value="stars">⭐ نجوم ⭐</option>
+                    <option value="hearts">❤️ قلوب ❤️</option>
+                    <option value="squares">🔲 مربعات 🔲</option>
+                    <option value="brackets">【 أقواس 】</option>
+                    <option value="frame">إطار كامل</option>
+                    <option value="flowers">🌸 زهور 🌸</option>
+                    <option value="custom">زخرفة مخصصة</option>
+                </select>
+                
+                <div id="customDecoration" class="hidden">
+                    <label for="prefixInput">الرمز قبل النص:</label>
+                    <input type="text" id="prefixInput" maxlength="5">
+                    
+                    <label for="suffixInput">الرمز بعد النص:</label>
+                    <input type="text" id="suffixInput" maxlength="5">
+                </div>
+            </div>
+            
+            <div class="action-buttons">
+                <button id="decorateBtn" class="primary-btn">تطبيق الزخرفة</button>
+                <button id="copyBtn" class="secondary-btn" disabled>نسخ النص</button>
+                <button id="resetBtn" class="secondary-btn">إعادة تعيين</button>
+            </div>
+            
+            <div class="result-section">
+                <label for="result">النص المزخرف:</label>
+                <div id="result" class="result-box"></div>
+            </div>
+        </main>
+        
+        <footer>
+            <p>تم تطويره بواسطة <a href="https://github.com/yourusername" target="_blank">اسمك</a> &copy; 2025</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
